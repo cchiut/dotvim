@@ -46,10 +46,11 @@ nnoremap <Leader>to :tabonly<CR>
 " SuperTab
 " use <c-v> to insert ture tab
 let g:SuperTabDefaultCompletionType="context"
+let g:SuperTabContextDefaultCompletionType="<c-p>"
 let g:SuperTabCompletionContexts=['s:ContextText', 's:ContextDiscover']
 let g:SuperTabContextTextOmniPrecedence=['&omnifunc', '&completefunc']
-let g:SuperTabContextDiscoverDiscovery=["&omnifunc:<c-x><c-o>", "&completefunc:<c-x><c-u>"]
-let g:SuperTabRetainCompletionDuration='completion'
+let g:SuperTabContextDiscoverDiscovery=["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
+let g:SuperTabRetainCompletionDuration='insert'
     
 " FuzzyFinder
 " <C-j> to open in split window 
