@@ -189,18 +189,6 @@ let g:SuperTabContextDiscoverDiscovery=["&completefunc:<c-x><c-u>", "&omnifunc:<
 let g:SuperTabRetainCompletionDuration='insert'
 
 "===
-" FuzzyFinder
-" <C-j> to open in split window
-" <C-k> for vertical
-" <C-]> to delete selected buffer
-"===
-let g:fuf_dataDir=$HOME.'/.vim/cache/fuf'
-nnoremap <Leader>fb :FufBuffer<CR>
-nnoremap <Leader>fl :FufLine<CR>
-nnoremap <Leader>fd :FufDir<CR>
-nnoremap <Leader>ff :FufCoverageFile<CR>
-
-"===
 " CtrlP
 " <C-p> to open function
 " <C-t> to open in new tab
