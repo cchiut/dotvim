@@ -13,9 +13,6 @@
 [submodule "bundle/vim-numbertoggle"]
 	path = bundle/vim-numbertoggle
 	url = git://github.com/jeffkreeftmeijer/vim-numbertoggle.git
-[submodule "bundle/vim-taskjuggler"]
-	path = bundle/vim-taskjuggler
-	url = https://github.com/cchiut/vim-taskjuggler.git
 [submodule "bundle/python-mode"]
 	path = bundle/python-mode
 	url = https://github.com/klen/python-mode.git
