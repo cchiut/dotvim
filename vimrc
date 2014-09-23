@@ -100,6 +100,7 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 " ruby lang
 "===
 autocmd Filetype ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd Filetype eruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd Filetype ruby let g:rubycomplete_buffer_loading=1
 autocmd Filetype ruby let g:rubycomplete_classes_in_global=1
 autocmd Filetype ruby let g:rubycomplete_rails= 1
@@ -183,12 +184,7 @@ call pathogen#helptags()
 " SuperTab
 " <C-v> to insert ture tab
 "===
-let g:SuperTabDefaultCompletionType="context"
-let g:SuperTabContextDefaultCompletionType="<c-p>"
-let g:SuperTabCompletionContexts=['s:ContextText', 's:ContextDiscover']
-let g:SuperTabContextTextOmniPrecedence=['&omnifunc', '&completefunc']
-let g:SuperTabContextDiscoverDiscovery=["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
-let g:SuperTabRetainCompletionDuration='insert'
+" Fix to supertab defaults
 
 "===
 " CtrlP
