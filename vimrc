@@ -91,7 +91,7 @@ autocmd FileType scss setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 "===
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+"autocmd BufNewFile,BufReadPost *.coffee setlocal shiftwidth=2 expandtab
 
 "===
 " python lang
@@ -102,11 +102,11 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 "===
 " ruby lang
 "===
-autocmd Filetype ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
-autocmd Filetype eruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
-autocmd Filetype ruby let g:rubycomplete_buffer_loading=1
-autocmd Filetype ruby let g:rubycomplete_classes_in_global=1
-autocmd Filetype ruby let g:rubycomplete_rails= 1
+"autocmd Filetype ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+"autocmd Filetype eruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+"autocmd Filetype ruby let g:rubycomplete_buffer_loading=1
+"autocmd Filetype ruby let g:rubycomplete_classes_in_global=1
+"autocmd Filetype ruby let g:rubycomplete_rails= 1
 
 "===
 " SHORTCUT
