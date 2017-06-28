@@ -177,13 +177,11 @@ vnoremap <Leader>s :sort<CR>
 " <C-y> to create new file
 " <C-z> <C-o> to open multiple files
 "===
-"let g:ctrlp_cache_dir=$HOME.'/.vim/cache/ctrlp'
-"let g:ctrlp_max_height=30
-"let g:ctrlp_mruf_exclude='/tmp/.*\|/temp/.*'
-"let g:ctrlp_open_new_file='r'
-"set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.rar
-"set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
-"set wildignore+=*.pyc,*_build/*,*/coverage/*
+let g:ctrlp_cache_dir=$HOME.'/.vim/cache/ctrlp'
+let g:ctrlp_mruf_exclude='/tmp/.*\|/temp/.*'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.rar
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+set wildignore+=*.pyc,*_build/*,*/coverage/*
 
 "===
 " python_mode
