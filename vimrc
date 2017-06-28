@@ -27,14 +27,12 @@ set pastetoggle=<F10>
 "===
 set incsearch
 set hlsearch
-set ignorecase
 set smartcase
 
 "===
 " line
 "===
-set number
-set colorcolumn=80
+"set colorcolumn=80
 set nowrap
 
 "===
@@ -65,7 +63,6 @@ set undodir=$HOME/.vim/undo
 " omni-completion
 "===
 set omnifunc=syntaxcomplete#Complete
-set completeopt=menuone,longest,preview
 
 "===
 " highlight unwanted white space
@@ -91,7 +88,6 @@ autocmd FileType scss setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 "===
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-"autocmd BufNewFile,BufReadPost *.coffee setlocal shiftwidth=2 expandtab
 
 "===
 " python lang
@@ -122,7 +118,7 @@ cnoremap <C-e>	<End>
 "===
 " remove highlight
 "===
-nnoremap <silent>\ :nohl<CR>
+nnoremap <silent>^ :nohl<CR>
 
 "===
 " keep indentation in selecting
@@ -145,16 +141,6 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 "===
-" map <leader> key
-"===
-let mapleader=','
-
-"===
-" map sort function
-"===
-vnoremap <Leader>s :sort<CR>
-
-"===
 " quick quit
 " - quit current window
 " - quit all windows
@@ -174,20 +160,13 @@ nnoremap <Leader>tc :tabclose<CR>
 nnoremap <Leader>to :tabonly<CR>
 
 "===
+" map sort function
+"===
+vnoremap <Leader>s :sort<CR>
+
+"===
 " PLUGIN
 "===
-
-"===
-" pathogen to manage scripts
-"===
-call pathogen#infect()
-call pathogen#helptags()
-
-"===
-" SuperTab
-" <C-v> to insert ture tab
-"===
-" Fix to supertab defaults
 
 "===
 " CtrlP
@@ -198,13 +177,13 @@ call pathogen#helptags()
 " <C-y> to create new file
 " <C-z> <C-o> to open multiple files
 "===
-let g:ctrlp_cache_dir=$HOME.'/.vim/cache/ctrlp'
-let g:ctrlp_max_height=30
-let g:ctrlp_mruf_exclude='/tmp/.*\|/temp/.*'
-let g:ctrlp_open_new_file='r'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.rar
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
-set wildignore+=*.pyc,*_build/*,*/coverage/*
+"let g:ctrlp_cache_dir=$HOME.'/.vim/cache/ctrlp'
+"let g:ctrlp_max_height=30
+"let g:ctrlp_mruf_exclude='/tmp/.*\|/temp/.*'
+"let g:ctrlp_open_new_file='r'
+"set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.rar
+"set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+"set wildignore+=*.pyc,*_build/*,*/coverage/*
 
 "===
 " python_mode
@@ -215,5 +194,5 @@ set wildignore+=*.pyc,*_build/*,*/coverage/*
 " <C-c>ro organize imports
 " <C-c>ra add import
 "===
-let g:pymode_doc=0
-let g:pymode_lint_ignore="E128"
+"let g:pymode_doc=0
+"let g:pymode_lint_ignore="E128"
