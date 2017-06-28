@@ -184,6 +184,11 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 set wildignore+=*.pyc,*_build/*,*/coverage/*
 
 "===
+" vim-jsx-pretty
+"===
+let g:vim_jsx_pretty_colorful_config=1
+
+"===
 " python_mode
 " <leader>r run code
 " <leader>b breakpoint bind
