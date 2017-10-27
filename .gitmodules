@@ -1,3 +1,6 @@
 [submodule "pack/local/start/ctrlp.vim"]
 	path = pack/local/start/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "pack/local/start/vim-jsx-improve"]
+	path = pack/local/start/vim-jsx-improve
+	url = https://github.com/neoclide/vim-jsx-improve.git
