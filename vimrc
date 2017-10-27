@@ -179,9 +179,11 @@ vnoremap <Leader>s :sort<CR>
 "===
 let g:ctrlp_cache_dir=$HOME.'/.vim/cache/ctrlp'
 let g:ctrlp_mruf_exclude='/tmp/.*\|/temp/.*'
+let g:ctrlp_show_hidden=1
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.rar
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 set wildignore+=*.pyc,*_build/*,*/coverage/*
+set wildignore+=*/node_modules/*,*/dist/*
 
 "===
 " vim-jsx-pretty
