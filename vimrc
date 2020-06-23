@@ -17,6 +17,7 @@ set pastetoggle=<F12>
 "===
 set nowrap
 set sidescroll=1
+set number
 
 
 "===
@@ -42,6 +43,7 @@ autocmd BufWinLeave * call clearmatches()
 "===
 " multiple windows
 "===
+set laststatus=2
 set splitbelow
 set splitright
 
@@ -101,6 +103,12 @@ nnoremap <Leader>to :tabonly<CR>
 "===
 " PLUGIN
 "===
+
+"===
+" nerdtree
+"===
+map <C-m> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "===
 " python_mode
