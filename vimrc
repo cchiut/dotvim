@@ -5,6 +5,7 @@
 " important
 "===
 set pastetoggle=<F12>
+set rtp+=/opt/local/share/fzf/vim
 
 
 "===
@@ -107,17 +108,21 @@ nnoremap <Leader>to :tabonly<CR>
 "===
 " nerdtree
 "===
-map <C-m> :NERDTreeToggle<CR>
+nnoremap <C-m> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+
 "===
-" python_mode
-" <leader>r run code
-" <leader>b breakpoint bind
-" :PymodeLintAuto fix PEP8 errors automatically
+" fzf
+"===
+nnoremap <C-p> :FZF<CR>
+
+
+"===
+" python-mode
+" K documentation
 " <C-c>g move to definition
 " <C-c>ro organize imports
 " <C-c>ra add import
 "===
-"let g:pymode_doc=0
 "let g:pymode_lint_ignore="E128"
