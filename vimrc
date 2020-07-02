@@ -82,17 +82,17 @@ vnoremap > >gv
 
 "===
 " quick quit
-" - quit current window and save
-" - quit all windows
+" <Leader-e> - quit current window and save
+" <Leader-E> - quit all windows
 "===
-noremap <Leader>e :wq<CR>
-noremap <Leader>E :quitall!<CR>
+nnoremap <Leader>e :wq<CR>
+nnoremap <Leader>E :quitall!<CR>
 
 
 "===
 " tab
-" - <gt> next tab
-" - <gT> previous tab
+" <gt> - next tab
+" <gT> - previous tab
 "===
 nnoremap <Leader>tn :tabnew<CR>
 nnoremap <Leader>tf :tabfirst<CR>
@@ -107,6 +107,8 @@ nnoremap <Leader>to :tabonly<CR>
 
 "===
 " nerdtree
+" s - open file in split window
+" t - open file in tab
 "===
 nnoremap <C-m> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -114,15 +116,18 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 "===
 " fzf
+" <C-x> - open file in split window
+" <C-v> - open file in vertical split window
+" <C-t> - open file in tab
 "===
 nnoremap <C-p> :FZF<CR>
 
 
 "===
 " python-mode
-" K documentation
-" <C-c>g move to definition
-" <C-c>ro organize imports
-" <C-c>ra add import
+" K - documentation
+" <C-c> g - move to definition
+" <C-c> ro - organize imports
+" <C-c> ra - add import
 "===
 "let g:pymode_lint_ignore="E128"
