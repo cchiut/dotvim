@@ -109,7 +109,9 @@ nnoremap <Leader>to :tabonly<CR>
 " nerdtree
 " s - open file in split window
 " t - open file in tab
+" SHIFT i - toggle show/hide hidden files
 "===
+let NERDTreeShowHidden=1
 nnoremap <C-m> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
