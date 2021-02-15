@@ -22,3 +22,6 @@
 [submodule "pack/tpope/start/vim-fugitive"]
 	path = pack/tpope/start/vim-fugitive
 	url = https://tpope.io/vim/fugitive.git
+[submodule "pack/plugins/start/python-mode"]
+	path = pack/plugins/start/python-mode
+	url = https://github.com/python-mode/python-mode.git
