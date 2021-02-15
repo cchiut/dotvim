@@ -25,3 +25,6 @@
 [submodule "pack/plugins/start/python-mode"]
 	path = pack/plugins/start/python-mode
 	url = https://github.com/python-mode/python-mode.git
+[submodule "pack/plugins/opt/solarized8"]
+	path = pack/plugins/opt/solarized8
+	url = https://github.com/lifepillar/vim-solarized8.git

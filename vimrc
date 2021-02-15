@@ -5,6 +5,7 @@
 " important
 "===
 set pastetoggle=<F12>
+colorscheme solarized8
 
 
 "===
@@ -28,6 +29,7 @@ filetype plugin indent on
 
 set hlsearch
 set colorcolumn=81
+
 
 "===
 " highlight trailing white space
