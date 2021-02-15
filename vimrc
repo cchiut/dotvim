@@ -5,7 +5,6 @@
 " important
 "===
 set pastetoggle=<F12>
-set rtp+=/opt/local/share/fzf/vim
 
 
 "===
@@ -122,6 +121,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " <C-v> - open file in vertical split window
 " <C-t> - open file in tab
 "===
+set rtp+=/opt/local/share/fzf/vim
 nnoremap <C-p> :FZF<CR>
 
 

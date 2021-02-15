@@ -16,3 +16,12 @@
 [submodule "pack/python-mode/start/python-mode"]
 	path = pack/python-mode/start/python-mode
 	url = https://github.com/python-mode/python-mode.git
+[submodule "pack/tpope/start/vim-commentary"]
+	path = pack/tpope/start/vim-commentary
+	url = https://tpope.io/vim/commentary.git
+[submodule "pack/tpope/start/vim-surround"]
+	path = pack/tpope/start/vim-surround
+	url = https://tpope.io/vim/surround.git
+[submodule "pack/tpope/start/vim-fugitive"]
+	path = pack/tpope/start/vim-fugitive
+	url = https://tpope.io/vim/fugitive.git
