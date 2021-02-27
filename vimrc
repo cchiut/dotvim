@@ -128,10 +128,9 @@ nnoremap <C-p> :FZF<CR>
 
 
 "===
-" python-mode
-" K - documentation
-" <C-c> g - move to definition
-" <C-c> ro - organize imports
-" <C-c> ra - add import
+" ale
 "===
-"let g:pymode_lint_ignore="E128"
+let g:ale_completion_enabled=1
+nmap K :ALEHover<CR>
+nmap gd :ALEGoToDefinitionInTab<CR>
+nmap gr :ALEFindReferences<CR>
