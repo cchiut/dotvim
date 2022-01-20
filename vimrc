@@ -5,7 +5,10 @@
 " important
 "===
 set pastetoggle=<F12>
-colorscheme solarized8
+colorscheme iceberg
+set termguicolors
+
+map <C-V> "+gP
 
 
 "===
@@ -107,6 +110,13 @@ nnoremap <Leader>to :tabonly<CR>
 "===
 
 "===
+" lightline
+"===
+let g:lightline = {
+	\ 'colorscheme': 'iceberg',
+	\ }
+
+"===
 " nerdtree
 " s - open file in split window
 " t - open file in tab
@@ -123,7 +133,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " <C-v> - open file in vertical split window
 " <C-t> - open file in tab
 "===
-set rtp+=/opt/local/share/fzf/vim
+source /usr/share/doc/fzf/examples/fzf.vim
 nnoremap <C-p> :FZF<CR>
 
 
