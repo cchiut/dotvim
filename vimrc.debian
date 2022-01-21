@@ -14,7 +14,8 @@ map <C-V> "+gP
 "===
 " moving around, searching and patterns
 "===
-
+set foldmethod=indent
+set foldlevel=1
 
 "===
 " displaying text
