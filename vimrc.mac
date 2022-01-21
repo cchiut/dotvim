@@ -6,6 +6,7 @@
 "===
 set pastetoggle=<F12>
 colorscheme iceberg
+set bg=light
 
 
 "===
