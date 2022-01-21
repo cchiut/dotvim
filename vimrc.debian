@@ -17,6 +17,7 @@ map <C-V> "+gP
 set foldmethod=indent
 set foldlevel=1
 
+
 "===
 " displaying text
 "===

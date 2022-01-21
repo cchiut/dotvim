@@ -12,6 +12,8 @@ set bg=light
 "===
 " moving around, searching and patterns
 "===
+set foldmethod=indent
+set foldlevel=1
 
 
 "===
