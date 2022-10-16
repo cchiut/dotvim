@@ -20,7 +20,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 
 " https://github.com/junegunn/fzf/blob/master/README-VIM.md
-Plug '/usr/share/doc/fzf/examples/fzf.vim'
+Plug '/opt/local/share/fzf/vim'
 
 " https://github.com/itchyny/lightline.vim
 Plug 'itchyny/lightline.vim'
@@ -64,8 +64,8 @@ colorscheme iceberg
 "===
 " fold
 "===
-set foldmethod=indent
-set foldlevel=1
+" set foldmethod=indent
+" set foldlevel=1
 
 
 "===
@@ -104,14 +104,16 @@ autocmd BufWinLeave * call clearmatches()
 set laststatus=2
 set splitright
 set splitbelow
+set mouse=a
 
 "===
 " netrw
 "===
 let g:netrw_liststyle=3
-let g:netrw_browse_split=3
 let g:netrw_winsize=20
-nmap <Leader>t :Vexplore<CR>
+let g:netrw_banner=0
+nmap <Leader>t :Lexplore %:p:h<CR>
+nmap <leader>cd :cd %:p:h<CR>:pwd<CR>
 " augroup ProjectDrawer
 "   autocmd!
 "   autocmd VimEnter * :Vexplore
@@ -151,3 +153,11 @@ nmap <Leader>s :w<CR>
 nmap <Leader>e :wq<CR>
 nmap <Leader>E :quitall!<CR>
 
+if has("unix")
+	let s:uname = system("uname")
+	if s:uname == "Darwin\n"
+		if has("nvim")
+			source $HOME/.macmap.vim
+		endif
+	endif
+endif
