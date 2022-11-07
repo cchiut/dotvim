@@ -2,4 +2,5 @@
 .netrwhist
 *.swp
 undo/
+nvim_undo/
 plugged

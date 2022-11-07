@@ -140,7 +140,6 @@ vmap < <gv
 vmap > >gv
 
 set undofile
-set undodir=$HOME/.vim/undo
 " set omnifunc=syntaxcomplete#Complete
 
 "===
@@ -156,8 +155,10 @@ nmap <Leader>E :quitall!<CR>
 if has("unix")
 	let s:uname = system("uname")
 	if s:uname == "Darwin\n"
-		if has("nvim")
-			source $HOME/.macmap.vim
+		if has("gui_vimr")
+			set undodir=$HOME/.vim/nvim_undo
+		else
+			set undodir=$HOME/.vim/undo
 		endif
 	endif
 endif
