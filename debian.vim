@@ -16,8 +16,14 @@ Plug 'tpope/vim-surround'
 " https://github.com/tpope/vim-commentary
 Plug 'tpope/vim-commentary'
 
+" https://github.com/mg979/vim-visual-multi
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
 " https://github.com/tpope/vim-fugitive
 Plug 'tpope/vim-fugitive'
+
+" https://github.com/airblade/vim-gitgutter
+Plug 'airblade/vim-gitgutter'
 
 " https://github.com/junegunn/fzf/blob/master/README-VIM.md
 Plug '/usr/share/doc/fzf/examples/fzf.vim'
@@ -64,9 +70,8 @@ colorscheme iceberg
 "===
 " fold
 "===
-" set foldmethod=indent
-" set foldlevel=1
-
+set foldmethod=syntax
+set foldlevelstart=11
 
 "===
 " displaying text
@@ -74,7 +79,6 @@ colorscheme iceberg
 set nowrap
 set sidescroll=1
 set number
-
 
 "===
 " highlighting
@@ -85,7 +89,7 @@ set colorcolumn=81
 "===
 " remove highlight
 "===
-nmap <Leader>h :nohl<CR>
+nmap <Leader>nh :nohl<CR>
 
 "===
 " highlight trailing white space
@@ -97,27 +101,14 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-
 "===
-" status bar, windows and tabs
+" status bar, windows, mouse and cd/pwd
 "===
 set laststatus=2
 set splitright
 set splitbelow
 set mouse=a
-
-"===
-" netrw
-"===
-let g:netrw_liststyle=3
-let g:netrw_winsize=20
-let g:netrw_banner=0
-nmap <Leader>t :Lexplore %:p:h<CR>
 nmap <leader>cd :cd %:p:h<CR>:pwd<CR>
-" augroup ProjectDrawer
-"   autocmd!
-"   autocmd VimEnter * :Vexplore
-" augroup END
 
 "===
 " tabs
@@ -130,7 +121,6 @@ nmap <Leader>tl :tablast<CR>
 nmap <Leader>tc :tabclose<CR>
 nmap <Leader>to :tabonly<CR>
 
-
 "===
 " editing text
 "===
@@ -138,10 +128,7 @@ set autoindent
 set shiftround
 vmap < <gv
 vmap > >gv
-
 set undofile
-set undodir=$HOME/.vim/undo
-" set omnifunc=syntaxcomplete#Complete
 
 "===
 " quick save and quit
@@ -153,3 +140,8 @@ nmap <Leader>s :w<CR>
 nmap <Leader>e :wq<CR>
 nmap <Leader>E :quitall!<CR>
 
+if has("gui_vimr")
+	set undodir=$HOME/.vim/nvim_undo
+else
+	set undodir=$HOME/.vim/undo
+endif
