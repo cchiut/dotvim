@@ -2,6 +2,9 @@
 " dot vim file by cchiut
 "===
 
+set nocp
+
+
 call plug#begin()
 
 " https://github.com/editorconfig/editorconfig-vim
@@ -26,7 +29,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " https://github.com/junegunn/fzf/blob/master/README-VIM.md
-Plug '/usr/share/doc/fzf/examples/fzf.vim'
+Plug '/usr/share/doc/fzf/examples'
 
 " https://github.com/itchyny/lightline.vim
 Plug 'itchyny/lightline.vim'
@@ -58,8 +61,8 @@ nmap <Leader>f :FZF<CR>
 " lightline
 "===
 let g:lightline = {
-	\ 'colorscheme': 'iceberg',
-	\ }
+\   'colorscheme': 'iceberg',
+\ }
 
 "===
 " iceberg
