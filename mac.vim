@@ -44,10 +44,18 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 "===
 " ale
 "===
+let g:ale_linters = {
+\   'python': ['mypy', 'pylsp'],
+\ }
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['autoimport', 'autopep8'],
+\}
 let g:ale_completion_enabled=1
-nmap K :ALEHover<CR>
-nmap gd :ALEGoToDefinitionInTab<CR>
-nmap gr :ALEFindReferences<CR>
+nmap <Leader>eh :ALEHover<CR>
+nmap <Leader>ef :ALEFix<CR>
+nmap <Leader>ed :ALEGoToDefinition -vsplit<CR>
+nmap <Leader>er :ALEFindReferences<CR>
 
 "===
 " fzf
@@ -133,12 +141,12 @@ set undofile
 "===
 " quick save and quit
 " <Leader-s> - save surrent window
-" <Leader-e> - quit current window and save
-" <Leader-E> - quit all windows
+" <Leader-q> - quit current window and save
+" <Leader-Q> - quit all windows
 "===
 nmap <Leader>s :w<CR>
-nmap <Leader>e :wq<CR>
-nmap <Leader>E :quitall!<CR>
+nmap <Leader>q :wq<CR>
+nmap <Leader>Q :quitall!<CR>
 
 if has("nvim")
 	set undodir=$HOME/.vim/nvim_undo
