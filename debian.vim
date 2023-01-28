@@ -149,7 +149,11 @@ set shiftround
 vmap < <gv
 vmap > >gv
 set undofile
-set undodir=$HOME/.vim/undo
+if has("nvim")
+    set undodir=$HOME/.vim/nvim_undo
+else
+    set undodir=$HOME/.vim/vim_undo
+endif
 
 "===
 " quick save and quit

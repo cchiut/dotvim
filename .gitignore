@@ -1,6 +1,6 @@
 .DS_Store
 .netrwhist
 *.swp
-undo/
+vim_undo/
 nvim_undo/
 plugged
