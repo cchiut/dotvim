@@ -34,6 +34,9 @@ Plug 'itchyny/lightline.vim'
 " https://github.com/cocopon/iceberg.vim/
 Plug 'cocopon/iceberg.vim'
 
+" https://github.com/preservim/tagbar
+Plug 'preservim/tagbar'
+
 call plug#end()
 
 "===
