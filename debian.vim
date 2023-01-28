@@ -48,11 +48,17 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " ale
 "===
 let g:ale_linters = {
+\   'rust': ['analyzer'],
 \   'python': ['mypy', 'pylsp'],
+\   'typescript': ['deno'],
+\   'javascript': ['eslint'],
 \}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'rust': ['rustfmt'],
 \   'python': ['autoimport', 'autopep8'],
+\   'typescript': ['tslint', 'deno'],
+\   'javascript': ['prettier_eslint', 'eslint'],
 \}
 let g:ale_completion_enabled=1
 nmap <Leader>eh :ALEHover<CR>
