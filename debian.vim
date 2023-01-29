@@ -60,7 +60,7 @@ let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'rust': ['rustfmt'],
 \   'python': ['autoimport', 'autopep8'],
-\   'typescript': ['tslint', 'deno'],
+\   'typescript': ['deno'],
 \   'javascript': ['prettier_eslint', 'eslint'],
 \}
 let g:ale_completion_enabled=1
