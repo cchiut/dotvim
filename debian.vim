@@ -50,17 +50,34 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 "===
 " ale
 "===
+let g:ale_python_pylsp_config = {
+\   'pylsp': {
+\     'configurationSources': [],
+\     'plugins': {
+\       'autopep8': {
+\         'enabled': v:false,
+\       },
+\	'black': {
+\         'enabled': v:true,
+\       },
+\       'ruff': {
+\         'enabled': v:true,
+\       },
+\       'yapf': {
+\         'enabled': v:false,
+\       }
+\     }
+\   }
+\}
 let g:ale_linters = {
 \   'rust': ['analyzer'],
 \   'python': ['mypy', 'pylsp'],
-\   'typescript': ['deno'],
 \   'javascript': ['eslint'],
 \}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'rust': ['rustfmt'],
-\   'python': ['autoimport', 'autopep8'],
-\   'typescript': ['deno'],
+\   'python': ['black', 'ruff'],
 \   'javascript': ['prettier_eslint', 'eslint'],
 \}
 let g:ale_completion_enabled=1
@@ -104,7 +121,7 @@ set number
 " highlighting
 "===
 set hlsearch
-set colorcolumn=81
+set colorcolumn=88
 
 "===
 " remove highlight
